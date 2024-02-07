@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios Oracle!</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-conteudo" href="index.html">Home</a>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="container-inputs">
+            <p class="container-alert"> <img src="assets/decodificator/bi_exclamation-circle-fill.svg" alt="icone exclamacao">Apenas letras minúsculas e sem acento</p>
+            <textarea onkeydown="buttonAttributeRemove()" maxlength="319" placeholder="Digite seu texto" class="text-area" name="Digite seu texto" id="textArea" cols="40" rows="8.5" style="resize: none;"></textarea>
+            <div class="container-buttons">
+                <button id="button-main" class="button" onclick="criptografar()" disabled>Criptografar</button>
+                <button id="button-main2" class="button" onclick="descriptografar()" disabled>Descriptografar</button>
+            </div>
+        </section>
+        <section id="container1" class="container-result">
+            <div id="container1-variable" class="container-result2">
+                <img class="container-raichu" src="assets/decodificator/pokemongif.gif" alt="raichu dancando">
+                <div class="container-texts">
+                    <h1 class="container-text">Nenhuma mensagem encontrada</h1>
+                    <p class="container-text">Digite um texto que você deseja criptografar ou descriptografar</p>
+                </div>
+            </div>
+        </section>
+        <section id="container2" class="container-result-variable">
+            <div class="variable-container-texts">
+                    <h1 class="variable-container-text">Texto Criptografado</h1>
+                    <textarea maxlength="319" readonly class="variable-text-area" name="variable-text" id="textarea1" col   s="30" rows="15" style="resize: none;"></textarea>
+                <div class="relative-itens"> 
+                    <img class="jump-raichu" src="assets/decodificator/raichu-happy.gif" alt="raichu jump">
+                    <div class="relative-buttons">
+                        <button class="relative-button" onclick="copiar()">Copiar</button>
+                        <button class="relative-button" onclick="reiniciar()">Reiniciar</button>
+                    </div>
+                </div>   
+            </div>
+        </section>
+        <section id="container3" class="container-result-variable2">
+                <div class="variable-container-texts">
+                    <h1 class="variable-container-text">Texto Descriptografado</h1>
+                    <textarea maxlength="319" readonly class="variable-text-area" name="variable-text" id="textarea2" col   s="30" rows="15" style="resize: none;"></textarea>
+                    <div class="relative-itens"> 
+                        <img class="jump-raichu" src="assets/decodificator/raichu-happy.gif" alt="raichu jump">
+                        <div class="relative-buttons">
+                            <button class="relative-button" onclick="copiar()">Copiar</button>
+                            <button class="relative-button" onclick="reiniciar()">Reiniciar</button>
+                        </div>
+                    </div>   
+                </div>
+
+        </section>
+    </main>
+    <footer class="rodape">
+        <a href="https://github.com/wataredev"><img class="icon-github" src="assets/decodificator/githubicon.png" alt="ícone github"></a>
+        <p>Desenvolvido por <strong>Watare</strong></p>
+        <img class="raichu-happy" src="assets/decodificator/raichugif.gif" alt="raichu feliz">
+    </footer>
+</body>
+</html>
