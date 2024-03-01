@@ -16,7 +16,7 @@
     <main class="container">
         <section class="container-inputs">
             <p class="container-alert"> <img src="assets/decodificator/bi_exclamation-circle-fill.svg" alt="icone exclamacao">Apenas letras minúsculas e sem acento</p>
-            <textarea onkeydown="buttonAttributeRemove()" maxlength="319" placeholder="Digite seu texto" class="text-area" name="Digite seu texto" id="textArea" cols="40" rows="8.5" style="resize: none;"></textarea>
+            <textarea onkeyup="removerAtributoBotao()" maxlength="319" placeholder="Digite seu texto" class="text-area" name="Digite seu texto" id="textArea" cols="40" rows="8.5" style="resize: none;"></textarea>
             <div class="container-buttons">
                 <button id="button-main" class="button" onclick="criptografar()" disabled>Criptografar</button>
                 <button id="button-main2" class="button" onclick="descriptografar()" disabled>Descriptografar</button>
@@ -26,7 +26,7 @@
             <div id="container1-variable" class="container-result2">
                 <img class="container-raichu" src="assets/decodificator/pokemongif.gif" alt="raichu dancando">
                 <div class="container-texts">
-                    <h1 class="container-text">Nenhuma mensagem encontrada</h1>
+                    <h1 class="container-text" id="container-text-error">Nenhuma mensagem encontrada</h1>
                     <p class="container-text">Digite um texto que você deseja criptografar ou descriptografar</p>
                 </div>
             </div>

@@ -1,41 +1,58 @@
 let textoFinal;
 let textArea = document.querySelector("textArea");
 
+function validaTexto(texto) {
+    return /^[a-z ]+$/.test(texto);
+}
+
 function criptografar() {
     let textoCriptografada = document.querySelector("textarea").value;
-    esconderTexto("container1")
-    mostrarTexto("container2")
-    esconderTexto("container3")
-    if (textoCriptografada) {
+    if (validaTexto(textoCriptografada)) {
         textoCriptografada = textoCriptografada.replace(/e/g, "enter")
                             .replace(/i/g, "imes")
                             .replace(/a/g, "ai")
                             .replace(/o/g, "ober")
                             .replace(/u/g, "ufat");
-                            console.log(textoCriptografada);
-                            document.getElementById("textarea1").innerHTML = textoCriptografada;
-                            textoFinal = textoCriptografada;
+        document.getElementById("textarea1").innerHTML = textoCriptografada;
+        textoFinal = textoCriptografada;
+        mostrarTexto("container2");
+        esconderTexto("container1");
+        esconderTexto("container3");
+        document.getElementById("textArea").placeholder = "Digite seu Texto";
+      }
 
+      else {
+        transicaoTextArea()
     }
+
     }
 
 function descriptografar() {
-    esconderTexto("container1");
-    esconderTexto("container2");
-    mostrarTexto("container3");
     let textoCriptografada = document.querySelector("textarea").value;
-    if (textoCriptografada) {
+    if (validaTexto(textoCriptografada)) {
         textoCriptografada = textoCriptografada.replace(/enter/g, "e")
                             .replace(/imes/g, "i")
                             .replace(/ai/g, "a")
                             .replace(/ober/g, "o")
                             .replace(/ufat/g, "u");
-                            console.log(textoCriptografada);
-                            document.getElementById("textarea2").innerHTML = textoCriptografada;
-                            textoFinal = textoCriptografada;
-                            
+        document.getElementById("textarea2").innerHTML = textoCriptografada;
+        textoFinal = textoCriptografada;
+        esconderTexto("container1");
+        esconderTexto("container2");
+        mostrarTexto("container3");
+        document.getElementById("textArea").placeholder = "Digite seu Texto";        
+    }
+    else {
+        transicaoTextArea()
     }
 }
+
+function transicaoTextArea() {
+    let transicaoTextArea = document.getElementById("textArea");
+    transicaoTextArea.value = "";
+    document.getElementById("textArea").placeholder = "Apenas letras minúsculas e sem acento!";
+}
+
 
 function esconderTexto(tag) {
     document.getElementById(tag).style.display = "none";
@@ -68,9 +85,10 @@ function reiniciar() {
     mostrarTextoInicial("container1", "container1-variable")
     esconderTexto("container2")
     esconderTexto("container3")
+    document.getElementById("textArea").placeholder = "Digite seu Texto";
 }
 
-function buttonAttributeRemove() {
+function removerAtributoBotao() {
     const texto = document.getElementById("textArea").value
     if (texto === "") {
         document.getElementById("button-main").disabled = true;

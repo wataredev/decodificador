@@ -619,3 +619,27 @@ body {
     }
 
 }
+
+@media (max-width: 535px) {
+    .container-index-texts {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .span-h1 {
+        padding-left: 0;
+    }
+    
+    .index-h1 {
+        padding-bottom: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .strong-decodificador {
+        width: 70%;
+        margin-left: 14%;
+    }
+}
