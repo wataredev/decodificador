@@ -92,6 +92,7 @@ body {
 .container-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
 }
 
@@ -334,14 +335,23 @@ body {
 
     .container-buttons { 
         gap: 50px;
+        width: 125%;
+        margin-left: -12%;
     }
 
     .button {
         padding: 3%;
-        width: 45%;
+        width: 40%;
         font-size: 0.70rem;
         overflow: hidden;
     }
+
+    .button:hover {
+        background-color: var(--cor-animacao);
+        font-size: 0.75rem;
+        transition-duration: 1s;
+    }
+    
 
     .container-result {
         height: 350px;
@@ -394,6 +404,12 @@ body {
         padding: 0;
         gap: 10px;
         padding-top: 6%;
+    }
+
+    .relative-button:hover {
+        background-color: var(--cor-animacao);
+        font-size: 0.8rem;
+        transition-duration: 1s;
     }
 
     .relative-button {
@@ -463,6 +479,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 90px;
+    align-items: center;
     background-color: var(--cor-secundaria);
 
 }
@@ -485,15 +502,14 @@ body {
     width: 50%;
     height: 45px;
     align-items: center;
-    margin-left: 23%;
-    padding-left: 5.5%;
+    justify-content: center;
     font-size:0.8vw;
     background-color: var(--cor-primaria);
 }
 
 .nav-link-decodificador:hover {
     background-color: var(--cor-animacao);
-    font-size: 1.03rem;
+    font-size: 1rem;
     transition-duration: 1s;
 }
 
