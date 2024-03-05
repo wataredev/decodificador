@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
+
 :root {
-    --cor-primaria: #EEEDEB;
-    --cor-secundaria: #E0CCBE;
-    --cor-animacao: #FEE0CE;
-   
-    --cor-texto: #343A40;
-    
+    --cor-primaria: #FEE0CE;
+    --cor-secundaria: #f7d68b;
+    --cor-animacao: #ffe5a9;
+    --cor-texto: #494a44;
     --fonte: "Krona One", sans-serif;
 }
-
 
 * {
     margin: 0;
@@ -20,9 +18,13 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 0px;
     min-height: 100vh;
-    background-color: var(--cor-primaria);
+}
+
+.container-decodificador {
+    background-image: url(../assets/decodificator/background-limpo.png);
+    background-position: center;
+    background-size: cover;
 }
 
 .cabecalho {
@@ -79,6 +81,7 @@ body {
     border-radius: 10px;
     padding: 25px;
     font-size: 3.125rem;
+    background-color: #FDF8DF;
     outline: none;
 }
 
@@ -153,6 +156,7 @@ body {
     font-size: 1.8rem;
     padding: 5% 5% 0 5%;
     border: 0;
+    background-color: #FDF8DF;
     outline: none;
 }
 
@@ -186,7 +190,7 @@ body {
 .relative-button {
     height: 55px;
     border-radius: 18px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-animacao);
     font-family: var(--fonte);
     cursor: pointer;
     overflow-wrap: break-word;
@@ -228,7 +232,7 @@ body {
     justify-content: center;
     gap: 10px;
     font-family: var(--fonte);
-    background-color: var(--cor-secundaria);
+    background-color: #f7d68b;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -423,13 +427,18 @@ body {
     padding: 1% 0 0 1%;
 }
 
+.index-body {
+    background-image: url(../assets/index/Background.png);
+    background-position: center;
+    background-size: cover;
+}
+
 .container-index-main {
     width: 100%;
     display: flex;
+    min-height: 75vh;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    min-height: 75vh;
 }
 
 .container-index {
@@ -445,9 +454,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 70%;
-    gap: 10px;
     font-size: 1.4rem;
-    padding-left: 20%;
+    padding-left: 45%;
 }
 
 .index-h1 {
@@ -455,48 +463,42 @@ body {
 }
 
 .strong-decodificador {
-    background-image: linear-gradient(180deg, #FEE0CE, #E0CCBE);
+    background: #f7d68b;
     padding: 1%;
     border-radius: 15px;
-    animation:  color 12s ease-in-out infinite;
     overflow-wrap: break-word;
 }
 
 .index-container-two {
     display: flex;
-    justify-content: center;
     width: 50%;
     color: var(--cor-texto);
+    justify-content: center;
 }
 
 .index-container-nav {
-    border: 2px solid black;
-    border-radius: 5%;
-    height: 350px;
+    height: 450px;
     width: 40%;
-    padding-top: 45px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 90px;
     align-items: center;
-    background-color: var(--cor-secundaria);
-
+    justify-content: center;
+    background-color: #FCF4C7;
+    background-image: url(../assets/index/background-botao-decodificador.png);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 15px;
 }
 
-.nav-link-index {
-    text-decoration: none;
-    background-color: var(--cor-secundaria);
-    color: black;
-    font-family: var(--fonte);
-    font-size: 1.8rem;
-}
 
 .nav-link-decodificador {
     display: flex;
     text-decoration: none;
     color: black;
     font-family: var(--fonte);
+    background-color: var(--cor-secundaria);
     border: 2px solid black;
     border-radius: 15px;
     width: 50%;
@@ -504,7 +506,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size:0.8vw;
-    background-color: var(--cor-primaria);
+    padding: 3%;
 }
 
 .nav-link-decodificador:hover {
@@ -570,7 +572,6 @@ body {
     .nav-link-decodificador {
         font-size: 1.8vh;
         justify-content: center;
-        margin-left: 24%;
         padding-left: 0;
     }
 
@@ -616,17 +617,9 @@ body {
         padding-top: 0;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        gap: 0;
-        background-color: var(--cor-primaria);
-    }
-
-    .nav-link-index {
-        display: none;
     }
 
     .nav-link-decodificador {  
-        margin-left: 21%;
         font-size: 0.75rem;
         width: 60%;
         padding-left: 0;
