@@ -6,6 +6,9 @@ Este é um desafio de programação onde o objetivo é criar um site utilizando 
 
 O desafio consiste em criar um site simples que permita aos usuários inserir um texto em um campo de entrada. Após a inserção do texto, o usuário deve ser capaz de criptografá-lo e exibir o resultado criptografado em uma caixa de resposta. Além disso, a caixa de resposta deve conter um botão "Copiar" para que o usuário possa facilmente copiar o texto criptografado para a área de transferência.
 
+
+## Acesse o projeto aqui: wataredev.github.io/decodificador/
+
 ## Tecnologias Utilizadas
 
 - HTML: Utilizado para estruturar a página web.
@@ -19,11 +22,6 @@ O desafio consiste em criar um site simples que permita aos usuários inserir um
 - **Descriptografar texto:** Ao clicar em um botão "Descriptografar", o texto inserido pelo usuário será descriptografado.
 - **Exibir texto criptografado:** O texto criptografado será exibido em uma caixa de resposta.
 - **Botão Copiar:** Um botão "Copiar" permite que o usuário copie o texto criptografado para a área de transferência.
-
-## Como Executar o Projeto
-
-wataredev.github.io/decodificador/
-
 
 ## Contribuindo
 
